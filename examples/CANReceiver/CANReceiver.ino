@@ -1,13 +1,19 @@
 // Copyright (c) Sandeep Mistry. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+// Selección del hardware a utilizar
+#define HW_RTLS_V4_0_X
+// #define HW_RTLS_V4_1_X
+
 #include <CAN.h>
+#include "boards.h"
 
 void setup() {
-  Serial.begin(9600);
-  while (!Serial);
+  Serial.begin(57600);
 
   Serial.println("CAN Receiver");
+
+  CAN.setPins( A_GPIO_5, GPIO_INT1 );
 
   // start the CAN bus at 500 kbps
   if (!CAN.begin(500E3)) {
