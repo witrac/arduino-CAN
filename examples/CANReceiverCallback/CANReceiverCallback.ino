@@ -2,8 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 // Selección del hardware a utilizar
-#define HW_RTLS_V4_0_X
-// #define HW_RTLS_V4_1_X
+// #define HW_RTLS_V4_0_X
+#define HW_RTLS_V4_1_X
 
 #include <CAN.h>
 #include "boards.h"
